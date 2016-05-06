@@ -56,6 +56,8 @@ function loadData() {
 		$( "<ul/>", {"class": "my-new-list", html: items.join( "" )}
 			).appendTo( "#nytimes-articles" );
 
+    }).fail( function(){
+    	$('#nytimes-articles').html('<h2>Unable to load.</h2>')
     });
 
     return false;
